@@ -8,7 +8,6 @@ function prime(){
         if(num%i == 0){
             console.log("not a prime");
             return;
-            
         }
     }
     console.log("prime");
