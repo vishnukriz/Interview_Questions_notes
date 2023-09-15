@@ -22,3 +22,12 @@ function palindrome(){
     }
 }
 palindrome();
+
+
+/**
+time
+emit
+not a palindrome
+**/
+
+
