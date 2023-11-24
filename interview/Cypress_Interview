@@ -1,0 +1,90 @@
+**Cypress Questions**
+--
+1) Delete the text and type Random in textbox
+cy.get('#id1').clear().type("testing")
+
+2) Type any text and press enter in keyboard in textbox
+cy.get('#id2').type("test{enter}")
+
+3) Select option4 in dropdown
+cy.get('select#id3').select('Option4')
+
+4) Unselect the check box1 and select checkbox2 and checkbox3
+cy.xpath("//input[@name = 'check1']).uncheck();
+cy.xpath("//input[@type = 'checkbox']).check(['CheckBox2', 'CheckBox3']);
+
+5) Verify this text contain "Automation testing"
+cy.contain("Automation testing").should('exist')
+
+6) Verify below number is less than 10
+6
+
+7) Click on bottommost right corner on below box
+cy.get('#mycanvas').click('bottomRight')
+
+8) there is an element below. verify the element is not visible in screen
+cy.get('#someid').should('not.be.visible')
+
+9) Verify below element is visible and verify text to assertMyPresence by chainable command textbox(assertMyPresence)
+cy.get('#randomid').should('be.visible')
+// cy.get('#randomid').should('have.text', 'assertMyPresence')
+
+10) type some text in second textbox              has context menu
+cy.xpath("//input[@type = 'text'].eq(1).type("work test")
+--
+
+
+
+**JavaScript Program:**
+--
+1) declare an array and find 3rd largest number in an array
+
+2) Find Experience (in yrs) > 3
+let a=[
+    {
+        "name": "Employee1",
+        "Employer": "AclDigital",
+        "Experience (in yrs)": 2
+    },
+    {
+        "name": "Employee2",
+        "Employer": "AclDigital",
+        "Experience (in yrs)": 3
+    },
+    {
+        "name": "Employee3",
+        "Employer": "Siemens",
+        "Experience (in yrs)": 6
+    },
+    {
+        "name": "Employee4",
+        "Employer": "Siemens",
+        "Experience (in yrs)": 3
+    },
+    {
+        "name": "Employee5",
+        "Employer": "Siemens",
+        "Experience (in yrs)": 4
+    },
+    {
+        "name": "Employee6",
+        "Employer": "Siemens",
+        "Experience (in yrs)": 2
+    }
+]
+
+Note:
+a.filter(el=>{"Experience (in yrs)" > 3})
+
+
+3) Find the index of 6:
+let a = [4,5,6,8]
+a.indexOf(3)
+
+4) Difference between let and var
+
+
+
+
+
+
