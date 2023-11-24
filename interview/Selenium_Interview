@@ -1,0 +1,24 @@
+**program questions**
+--
+1) Declare a string {2,3,4,s,t,u} with alpha numeric and get result as {s:2, t:3, u:4}
+
+
+**Selenium Questions**
+--
+2) Handling Dropdowm without select class
+3) Crossbrowser testing
+4) bug release
+5) multiple windows handling
+6) mouse and touch events
+7) selenium architecture/components
+8) Testng framework - explain
+9) cucumber framework - features
+10) how to get screenshot in selenium
+11) d/b scenario and scenario outline
+12) multi selection in dropdown
+13) fluent wait, explict wait
+14) webdriver and remote driver
+15) backgound keyword
+16) selenium 3 and selenium 4
+
+
