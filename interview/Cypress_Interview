@@ -33,6 +33,27 @@ cy.get('#randomid').should('be.visible')
 cy.xpath("//input[@type = 'text'].eq(1).type("work test")
 --
 
+11) defaultTimeout
+12) JSON
+13) cy.intercept()
+14) set env variable
+15) custom commands - read excel file
+16) cypress command - to run the script in Chrome browser and in handed mode
+17) alias
+18) access keyboard key in cypress
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 **JavaScript Program:**
