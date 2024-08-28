@@ -17,7 +17,7 @@ cy.xpath("//input[@type = 'checkbox']).check(['CheckBox2', 'CheckBox3']);
 cy.contain("Automation testing").should('exist')
 
 6) Verify below number is less than 10
-6
+cy.contains("100").should("be.lessthan", 60)
 
 7) Click on bottommost right corner on below box
 cy.get('#mycanvas').click('bottomRight')
