@@ -3,7 +3,10 @@
 1) Declare a string {2,3,4,s,t,u} with alpha numeric and get result as {s:2, t:3, u:4}
 
 
-**Selenium Questions**
+**Selenium Questions**:
+https://www.testgorilla.com/blog/tricky-selenium-interview-questions-answers/
+https://www.geeksforgeeks.org/selenium-interview-questions/#selenium-interview-questions-for-freshers
+https://rahulshettyacademy.com/blog/index.php/selenium-webdriver-with-java-interview-questions/
 --
 2) Handling Dropdowm without select class
 3) Crossbrowser testing
