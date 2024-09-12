@@ -20,5 +20,47 @@
 14) webdriver and remote driver
 15) backgound keyword
 16) selenium 3 and selenium 4
+1) get all options in dropdown
+2) Assertions
+3) How do you use XPath in Selenium testing
+4) How do you upload a file using Selenium WebDriver
 
 
+
+17. Manage iframe in Selenium webdriver: Iframe is an element of HTML that puts another webpage within the parent page.
+driver.switchTo().frame("ID");
+driver.switchTo().frame(0);
+driver.switchTo().frame(driver.findElements(By.tagName(“iframe”).get(0));
+driver.switchTo().defaultContent()
+
+18. Robot class is a Java-based utility class that lets the tester  automate tasks that can’t be done using Selenium’s built-in methods (mouse intractions)
+
+19. Selenium navigation commands:
+navigate().forward(); - moves to next page
+naviagte().back(); - moves to previous page
+navigate().refresh() - reload the page
+navigate().to() - opens new web page
+
+19. difference between driver.close() and driver.quit() commands:
+driver.close() - closes the current tab/window
+driver.quit() - closes all the windows
+
+20. differences between driver.findElement() and driver.findElements() :
+driver.findElement() - returns first matching element of the passed locator
+driver.findElements() - returns the list of elements that matches the locator
+
+21. POM - Page object model is a design pattern where we can create separate classes to represent each web page in the application.
+These classes encapsulates the web elements and intractions, which makes tests more readable, maintainable and reducting te dupliaction of the code.
+
+22. Difference between getText() and getAttribute() in Selenium:
+getText() - provides the visible text of the web Element
+getAttribute() - provides the value of the particular HTML attribute
+Eg: <h3 title=”HTML Attributes”> ATTRIBUTES </h3>
+In the above example, the h3 tag has an attribute with the property name as "title" and property value as "HTML Attributes".
+
+23. Handle dynamic elements that change attributes or IDs on each page load: we can use robust locators like Xpath or CSS selectors based on stable attaribute 
+or parent elements. This ensure a reliable way to locate elements even if ID or attribute changes.
+
+24. difference between getWindowHandle() and getWindowHandles():
+getWindowHandle() - returns the unique handle of the currently focused window or tab
+getWindowHandles() - returns a set of all open window handles. Used when dealing with multiple windows or tabs, allowing easy switching between them.
