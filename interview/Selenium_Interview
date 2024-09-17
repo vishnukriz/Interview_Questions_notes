@@ -110,3 +110,25 @@ File desFile = new File(filewithPath)
 Step 4: copy file at destination
 FileUtils.copyFile(Srcfile, desFile)
 
+14. d/b scenario and scenario outline:
+Scenario - is used for individual, non-parameterized test cases.
+Scenario outline - is used for parameterized test cases where same steps executed multiple times with different set of input datas. Powerful feature in cucumber.
+Scenario Outline: Login test with vaild data
+Given  User navigates to Login page
+When   User enter vaild email in <Username> field
+And    User enter vaild password in <password> field
+And    User clicks login button
+Then   User navigates to HomePage
+eg:
+|Username             |password   |
+|Test@gmail.com       |1234       |
+|work@gmail.com       |12@90      |
+|user@gmail.com       |567#4      |
+
+Scenario: Login test with vaild data
+Given  User navigates to Login page
+When   User enter vaild email "test@gmail.com in email field
+And    User enter vaild password "23@fg" in password field
+And    User clicks login button
+Then   User navigates to HomePage
+
