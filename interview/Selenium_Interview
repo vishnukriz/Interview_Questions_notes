@@ -67,6 +67,9 @@ or parent elements. This ensure a reliable way to locate elements even if ID or 
 24. difference between getWindowHandle() and getWindowHandles():
 getWindowHandle() - returns the unique handle of the currently focused window or tab
 getWindowHandles() - returns a set of all open window handles. Used when dealing with multiple windows or tabs, allowing easy switching between them.
+set: It will set the window handles in the form of string. set<string> set= driver.getwindowhandles();
+switch to: This function is used to switch between the windows.
+action: This methods helps to do actions to windows.
 
 9. *Handling Dropdown*
 1) using Select class
