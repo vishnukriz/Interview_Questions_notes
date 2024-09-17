@@ -70,6 +70,17 @@ getWindowHandles() - returns a set of all open window handles. Used when dealing
 set: It will set the window handles in the form of string. set<string> set= driver.getwindowhandles();
 switch to: This function is used to switch between the windows.
 action: This methods helps to do actions to windows.
+String handle = driver.getwindowHandle();
+Set<string> allhandles = driver.getwindowhandles();
+
+//iterate through each window:
+for(String handle: allhandles){
+driver.switchTo.window(handle);
+//perform actions 
+driver.getTitle();
+}
+driver.switchTo().defaultcontent();
+
 
 9. *Handling Dropdown* / multi selection in dropdown - use  selectByIndex, selectByvalue, selectByvisibleText at a time with different dropdwon options
 1) using Select class
