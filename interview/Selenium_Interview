@@ -80,3 +80,7 @@ eg: driver.findElement(By.id("loc")).sendKeys("option name");
 WebElement  testDropdown1 = driver.findElement(By.id("locator")); 
 JavaScriptExecutor js = (JavaScriptExecutor) driver;
 js.executeScript("arguments[0].value='option'", testDropdown1);
+
+10. Crossbrowser testing: is a type of non-functional testing that let us to check whether website works as intended when asscessed using different 
+    OS combination - different browsers and OS.
+
