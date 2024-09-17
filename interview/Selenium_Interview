@@ -84,3 +84,6 @@ js.executeScript("arguments[0].value='option'", testDropdown1);
 10. Crossbrowser testing: is a type of non-functional testing that let us to check whether website works as intended when asscessed using different 
     OS combination - different browsers and OS.
 
+11. Bug Release: Bug release is when the software or an application is handed over to the testing team knowing that the defect is present in a release. 
+During this, the priority and severity of bug are low, as the bug can be removed before the final handover
+
