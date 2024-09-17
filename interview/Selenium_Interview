@@ -71,7 +71,7 @@ set: It will set the window handles in the form of string. set<string> set= driv
 switch to: This function is used to switch between the windows.
 action: This methods helps to do actions to windows.
 
-9. *Handling Dropdown*
+9. *Handling Dropdown* / multi selection in dropdown - use  selectByIndex, selectByvalue, selectByvisibleText at a time with different dropdwon options
 1) using Select class
  options: selectByIndex, selectByvalue, selectByvisibleText
 eg:   WebElement  testDropdown = driver.findElement(By.id("locator"));
