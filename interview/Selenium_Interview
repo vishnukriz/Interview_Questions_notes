@@ -88,5 +88,15 @@ js.executeScript("arguments[0].value='option'", testDropdown1);
     OS combination - different browsers and OS.
 
 11. Bug Release: Bug release is when the software or an application is handed over to the testing team knowing that the defect is present in a release. 
-During this, the priority and severity of bug are low, as the bug can be removed before the final handover
+During this, the priority and severity of bug are low, as the bug can be removed before the final handover.
+
+
+12. Mouse and touch events: using Action class (click, dobleclick, rightclick)
+   WebElement m = driver.findElement(By.xpath("/html/body/main/div/div/div[2]/button[1]"));
+click, dobleclick, rightclick:
+   Actions a = new Actions(driver);
+   a.moveToElement(m).click().build().perform();
+ Mouse Hover: 
+   Actions a = new Actions(driver);
+   a.clickAndHold(m).build().perform();
 
