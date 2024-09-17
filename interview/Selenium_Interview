@@ -100,3 +100,13 @@ click, dobleclick, rightclick:
    Actions a = new Actions(driver);
    a.clickAndHold(m).build().perform();
 
+13. How to get screenshot in selenium: public static void takeScreenShot(Webdriver webdriver, String filewithPath) {
+ Step 1: Covert webdriver obj into takeScreenshot 
+TakeScreenshot Scrshot = ((TakeScreenshot)webdriver);
+Step 2: Call getScreenshotAs to create a image file
+File ScrFile = Scrshot.getScreenshotAs(Output.FILE);
+Step 3: Move image file to new destination
+File desFile = new File(filewithPath)
+Step 4: copy file at destination
+FileUtils.copyFile(Srcfile, desFile)
+
