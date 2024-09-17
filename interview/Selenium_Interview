@@ -67,3 +67,16 @@ or parent elements. This ensure a reliable way to locate elements even if ID or 
 24. difference between getWindowHandle() and getWindowHandles():
 getWindowHandle() - returns the unique handle of the currently focused window or tab
 getWindowHandles() - returns a set of all open window handles. Used when dealing with multiple windows or tabs, allowing easy switching between them.
+
+25. *Handling Dropdown*
+1) using Select class
+3 options: selectByIndex, selectByvalue, selectByvisibleText
+eg:   WebElement  testDropdown = driver.findElement(By.id("locator"));
+      Select drop = new Select(testDropdown);
+      drop.selectByinder(5);
+2) without Select class: we can obtain using Action class, sendKeys, JavaScript Executor class.
+eg: driver.findElement(By.id("loc")).sendKeys("option name");
+
+WebElement  testDropdown1 = driver.findElement(By.id("locator")); 
+JavaScriptExecutor js = (JavaScriptExecutor) driver;
+js.executeScript("arguments[0].value='option'", testDropdown1);
