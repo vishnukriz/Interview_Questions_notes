@@ -45,20 +45,23 @@ cy.xpath("//input[@type = 'text'].eq(1).type("work test")
 
 
 
-
-
-
-
-
-
-
-
-
-
-
 **JavaScript Program:**
 --
 1) declare an array and find 3rd largest number in an array
+function largestNumber() {
+ let arr = [56, 3, 98, 5, 66];
+
+ for(let i=1;i<arr.length;i++){
+   for(let j=0;j<i+1;j++){
+     if(arr[i]>arr[j]){
+       [arr[i], arr[j]] = [arr[j], arr[i]]
+    }
+  }
+ }
+ console.log(arr);
+ console.log("3rd largest number:"+ arr[2]);
+}
+largestNumber();
 
 2) Find Experience (in yrs) > 3
 let a=[
@@ -94,15 +97,52 @@ let a=[
     }
 ]
 
-Note:
-a.filter(el=>{"Experience (in yrs)" > 3})
+Answer: 
+let exp = a.filter(el => 
+  el["Experience (in yrs)"] > 3);
+console.log(exp);
 
 
 3) Find the index of 6:
 let a = [4,5,6,8]
-a.indexOf(3)
+a.indexOf(2);
 
-4) Difference between let and var
+4) Difference between let and var:
+ Both keywords are used to declare variables in javaScript.The difference between var and let are in the scope of the variables we created,
+ Variables declared by let are only avaialble inside the block where they definied
+ Variables declared by var are available throughout the function where they are defined.
+ eg 1: function varScoping() {
+  var x = 1;
+
+  if (true) {
+    var x = 2;
+    console.log(x); // will print 2
+  }
+
+  console.log(x); // will print 2
+}
+
+function letScoping() {
+  let x = 1;
+
+  if (true) {
+    let x = 2;
+    console.log(x); // will print 2
+  }
+
+  console.log(x); // will print 1
+}
+
+eg 2: 
+// Global variables
+var x = 1;
+let y = 2;
+console.log(this.x); // will print 1
+console.log(this.y); // will print undefined
+
+
+
+
 
 
 
