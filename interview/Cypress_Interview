@@ -44,8 +44,8 @@ import { defineconfig } from cypress;
 
 export default defineconfig ({
   env: {
-    "user" : "Test",
-    "pass" : "123@45"
+    user : "Test",
+    pass : "123@45"
   }
 });
 we can use in the spec file like:
