@@ -33,10 +33,29 @@ cy.get('#randomid').should('be.visible')
 cy.xpath("//input[@type = 'text'].eq(1).type("work test")
 --
 
-11) defaultTimeout: Cypress has default timeout for cypress comments and assertions, (i.e 4000 milliseconds) . we can also change in spec file using {timeout:5000}
+11) defaultTimeout: Cypress has default timeout for cypress comments and assertions, (i.e 4000 milliseconds) and specified in cypress.config file
+we can also change in spec file using {timeout:5000} 
+eg: cy.get(".class", { timeout: 30000 });
+
 12) JSON
 13) cy.intercept()
-14) set env variable
+14) set env variable:  we have set the env variable in cypress.config file 
+import { defineconfig } from cypress;
+
+export default defineconfig ({
+  env: {
+    "user" : "Test",
+    "pass" : "123@45"
+  }
+});
+we can use in the spec file like:
+loginpage.signin(Cypress.env("user"));
+    
+
+
+
+
+
 15) custom commands - read excel file
 16) cypress command - to run the script in Chrome browser and in handed mode
 17) alias
