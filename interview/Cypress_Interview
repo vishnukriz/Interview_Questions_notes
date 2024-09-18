@@ -39,6 +39,7 @@ eg: cy.get(".class", { timeout: 30000 });
 
 12) JSON
 13) cy.intercept()
+
 14) set env variable:  we have set the env variable in cypress.config file 
 import { defineconfig } from cypress;
 
@@ -58,14 +59,17 @@ npx cypress open - Test run
 npx cypress run  --browser chrome  --spec "path of the spec file"
 npx cypress run --headed --spec "path of the spec file"
 
-17) alias
+17) alias: used as the shortcut name for command line and file names.
+cy.get("#id").as("login");
+cy.get("@login").click().type("test");
+
+
 18) access keyboard key in cypress:
 cy.get("loc").type({enter});
              .type({backspace});
              .type({shift});
              .type({alt+shift)};
 whatever keys we want to use, need to insert via type like cy.get("#test").type({selectAll});
-
 
 
 
