@@ -51,15 +51,20 @@ export default defineconfig ({
 we can use in the spec file like:
 loginpage.signin(Cypress.env("user"));
     
-
-
-
-
-
 15) custom commands - read excel file
-16) cypress command - to run the script in Chrome browser and in handed mode
+
+16) cypress command - to run the script in Chrome browser and in handed mode:
+npx cypress open - Test run
+npx cypress run  --browser chrome  --spec "path of the spec file"
+npx cypress run --headed --spec "path of the spec file"
+
 17) alias
-18) access keyboard key in cypress
+18) access keyboard key in cypress:
+cy.get("loc").type({enter});
+             .type({backspace});
+             .type({shift});
+             .type({alt+shift)};
+whatever keys we want to use, need to insert via type like cy.get("#test").type({selectAll});
 
 
 
