@@ -33,7 +33,7 @@ cy.get('#randomid').should('be.visible')
 cy.xpath("//input[@type = 'text'].eq(1).type("work test")
 --
 
-11) defaultTimeout
+11) defaultTimeout: Cypress has default timeout for cypress comments and assertions, (i.e 4000 milliseconds) . we can also change in spec file using {timeout:5000}
 12) JSON
 13) cy.intercept()
 14) set env variable
