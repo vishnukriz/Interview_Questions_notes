@@ -157,3 +157,34 @@ Scenario: Search a product and add the first product to the User basket
 	When    Add the first laptop that appears in the search result to the basket
 	Then    User basket should display with added item
 
+
+17. Get all options in dropdown: 
+       we can use getOptions() methods to get the list of all options in the dropdown.
+
+  WebElement dropdown = driver.findElement(By.id("test"));
+  Select drp = new Select(dropdown);
+
+ //Get all options
+  List<WebElement> dd = drp.getOptions();
+  System.out.println(dd.size());
+
+   // Loop to print one by one
+   for(let i=0;i< dd.size(); i++){
+       System.out.println(dd.get(j).getText());
+  }
+
+     
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
