@@ -63,8 +63,28 @@ In the above example, the h3 tag has an attribute with the property name as "tit
 
 8. Handle dynamic elements that change attributes or IDs on each page load: we can use robust locators like Xpath or CSS selectors based on stable attaribute 
 or parent elements. This ensure a reliable way to locate elements even if ID or attribute changes.
+=========================
 
-24. difference between getWindowHandle() and getWindowHandles():
+2. *Handling Dropdown* / multi selection in dropdown - use  selectByIndex, selectByvalue, selectByvisibleText at a time with different dropdwon options
+   1) using Select class
+ options: selectByIndex, selectByvalue, selectByvisibleText
+eg:   WebElement  testDropdown = driver.findElement(By.id("locator"));
+      Select drop = new Select(testDropdown);
+      drop.selectByinder(5);
+   2) without Select class: we can obtain using Action class, sendKeys, JavaScript Executor class.
+eg: driver.findElement(By.id("loc")).sendKeys("option name");
+
+WebElement  testDropdown1 = driver.findElement(By.id("locator")); 
+JavaScriptExecutor js = (JavaScriptExecutor) driver;
+js.executeScript("arguments[0].value='option'", testDropdown1);
+
+3. Crossbrowser testing: is a type of non-functional testing that let us to check whether website works as intended when asscessed using different 
+    OS combination - different browsers and OS.
+
+4. Bug Release: Bug release is when the software or an application is handed over to the testing team knowing that the defect is present in a release. 
+During this, the priority and severity of bug are low, as the bug can be removed before the final handover.
+
+5. difference between getWindowHandle() and getWindowHandles():
 getWindowHandle() - returns the unique handle of the currently focused window or tab
 getWindowHandles() - returns a set of all open window handles. Used when dealing with multiple windows or tabs, allowing easy switching between them.
 set: It will set the window handles in the form of string. set<string> set= driver.getwindowhandles();
@@ -81,28 +101,7 @@ driver.getTitle();
 }
 driver.switchTo().defaultcontent();
 
-
-9. *Handling Dropdown* / multi selection in dropdown - use  selectByIndex, selectByvalue, selectByvisibleText at a time with different dropdwon options
-1) using Select class
- options: selectByIndex, selectByvalue, selectByvisibleText
-eg:   WebElement  testDropdown = driver.findElement(By.id("locator"));
-      Select drop = new Select(testDropdown);
-      drop.selectByinder(5);
-2) without Select class: we can obtain using Action class, sendKeys, JavaScript Executor class.
-eg: driver.findElement(By.id("loc")).sendKeys("option name");
-
-WebElement  testDropdown1 = driver.findElement(By.id("locator")); 
-JavaScriptExecutor js = (JavaScriptExecutor) driver;
-js.executeScript("arguments[0].value='option'", testDropdown1);
-
-10. Crossbrowser testing: is a type of non-functional testing that let us to check whether website works as intended when asscessed using different 
-    OS combination - different browsers and OS.
-
-11. Bug Release: Bug release is when the software or an application is handed over to the testing team knowing that the defect is present in a release. 
-During this, the priority and severity of bug are low, as the bug can be removed before the final handover.
-
-
-12. Mouse and touch events: using Action class (click, dobleclick, rightclick)
+6. Mouse and touch events: using Action class (click, dobleclick, rightclick)
    WebElement m = driver.findElement(By.xpath("/html/body/main/div/div/div[2]/button[1]"));
 click, dobleclick, rightclick:
    Actions a = new Actions(driver);
@@ -111,7 +110,7 @@ click, dobleclick, rightclick:
    Actions a = new Actions(driver);
    a.clickAndHold(m).build().perform();
 
-13. How to get screenshot in selenium: public static void takeScreenShot(Webdriver webdriver, String filewithPath) {
+10. How to get screenshot in selenium: public static void takeScreenShot(Webdriver webdriver, String filewithPath) {
  Step 1: Covert webdriver obj into takeScreenshot 
 TakeScreenshot Scrshot = ((TakeScreenshot)webdriver);
 Step 2: Call getScreenshotAs to create a image file
@@ -121,7 +120,7 @@ File desFile = new File(filewithPath)
 Step 4: copy file at destination
 FileUtils.copyFile(Srcfile, desFile)
 
-14. d/b scenario and scenario outline:
+11. d/b scenario and scenario outline:
 Scenario - is used for individual, non-parameterized test cases.
 Scenario outline - is used for parameterized test cases where same steps executed multiple times with different set of input datas. Powerful feature in cucumber.
 Scenario Outline: Login test with vaild data
@@ -142,4 +141,19 @@ When   User enter vaild email "test@gmail.com in email field
 And    User enter vaild password "23@fg" in password field
 And    User clicks login button
 Then   User navigates to HomePage
+
+15. Background Keyword: is used to define a step or series of steps which are common in all the test of the feature file
+eg:
+Feature: Test Background Feature
+Description: The purpose of this feature is to test the Background keyword
+
+Background: User is Logged In
+	Given   I navigate to the login page
+	When    I submit username and password
+	Then    I should be logged in 
+
+Scenario: Search a product and add the first product to the User basket
+	Given   User search for Lenovo Laptop
+	When    Add the first laptop that appears in the search result to the basket
+	Then    User basket should display with added item
 
