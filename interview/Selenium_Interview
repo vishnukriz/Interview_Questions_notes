@@ -170,7 +170,7 @@ Scenario: Search a product and add the first product to the User basket
 
    // Loop to print one by one
    for(let i=0;i< dd.size(); i++){
-       System.out.println(dd.get(j).getText());
+       System.out.println(dd.get(i).getText());
   }
 
      
