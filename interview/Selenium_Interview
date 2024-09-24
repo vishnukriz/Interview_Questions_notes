@@ -173,7 +173,10 @@ Scenario: Search a product and add the first product to the User basket
        System.out.println(dd.get(i).getText());
   }
 
-     
+14. webdriver and remote driver: Selenium webDriver is a tool used to execute automated Test cases on various browsers. (used for automating the browser 
+in same machine where the code is written) 
+Selenium RemoteWebdriver implements the webdriver interface to execute the test cases (runs the test in various machine. for this we will be using Selenium Grid)
+
   
 
 
