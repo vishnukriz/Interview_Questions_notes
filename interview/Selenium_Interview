@@ -178,6 +178,21 @@ in same machine where the code is written)
 Selenium RemoteWebdriver implements the webdriver interface to execute the test cases (runs the test in various machine. for this we will be using Selenium Grid)
 
   
+18. Assertions : It is a Validation or checkpoints for an application. Assertions states that the application works as expected or not. 
+It helps the user to understand the tests are passed or failed.
+2 types of Assertions:
+  Soft Assertion - Test Execution will be continued even if the assertion condition is not met.
+  Hard Assertion - Test Execution will be aborted, if the assertion condition is not met.
+  Methods:
+  assertEquals() - This will compare the 2 arguments. checks whether the Expected results equals to actual results.
+  assertNotEquals() - checks whether the Expected results not equals to actual results.
+  assertTrue() - This method verify the Boolean value is retured by the condition. The given condition is true, if it false - then test failed
+  assertFalse() - This method verify the Boolean value is retured by the condition. The given condition is false, if it true - then test failed
+  assertNull() - This method checks the expected output is null, if not - the value is false
+  assertNotNull() - This method checks the expected output is not null, if not - the value is false
+  assertAll() - to see assertion results at the end of the test
+
+
 
 
 
