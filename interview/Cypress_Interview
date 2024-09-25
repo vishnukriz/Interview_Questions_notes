@@ -40,7 +40,8 @@ eg: cy.get(".class", { timeout: 30000 });
 12) JSON
 13) cy.intercept()
 
-14) set env variable:  we have set the env variable in cypress.config file 
+14) set env variable:  we have set the env variable in cypress.config file  (env varialble is a variable whose values are set at the level of operating system 
+and set at outside of the context of the project)
 import { defineconfig } from cypress;
 
 export default defineconfig ({
