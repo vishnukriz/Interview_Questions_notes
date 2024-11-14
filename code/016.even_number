@@ -1,1 +1,21 @@
+-----------
+**Given number is even or not
+-----------
+function even(){
+   let num = 789;
+   
+   if(num%2 == 0){
+       console.log("given number is even");
+   }else{
+       console.log("not a even number");
+   }
+}
+even();
+
+
+
+
+-------
+**Given array - find even number and print in new array**
+-------
 
