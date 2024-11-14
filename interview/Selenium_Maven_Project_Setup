@@ -14,3 +14,33 @@ Step 6: Configure TestNG
   To configure testng.xml, Right click on Project→TestNG→ Convert to Testng
 Step 7: Run Test
   Right-click on testng.xml, go to Run As -> TestNG Suite.
+
+
+
+
+
+
+
+// Same Setup //
+
+**Selenium Webdriver installation**
+---
+Step 1 – Install Java Software Development Kit (JDK 17)
+Step 2 - Set envinomental variable (JAVA_HOME - copy filepath of Java (program files)/ and path - Java (bin))
+Step 3 – Install Eclipse IDE
+Step 4 - Open eclipse and create Java project
+Step 5: Configure - convert to Maven project (target folder - pom.xml file will be created) 
+Step 6: Add dependencies from mvnrepository (selenium java, testng) to pom.xml for running the basic selenium testing
+Step 7: Maven dependencies will be created 
+Setp 8: Create new package under it, create a new java class
+---
+
+**Summary**
+---
+Aside from a browser, you will need the following to start using WebDriver
+Java Development Kit (JDK). https://www.oracle.com/java/technologies/downloads/
+Eclipse IDE – http://www.eclipse.org/downloads/
+
+When starting a WebDriver project in Eclipse, do not forget to import the Java Client Driver files onto your project. These files will constitute your Selenium Library.
+---
+
