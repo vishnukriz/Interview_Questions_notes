@@ -15,3 +15,17 @@ SumOfDigits();
 
 //result:
 //17
+
+
+
+// sum of all the digits in array
+function sum(){
+    let arr = [5, 4, 9, 12, 45];
+    
+    let sumofdigits = arr.reduce(((accu,curVal) => accu + curVal), 0);
+    console.log(sumofdigits);
+  
+}
+sum();
+
+//75
