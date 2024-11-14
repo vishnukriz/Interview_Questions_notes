@@ -1,18 +1,50 @@
-function squareRoot(){
-    let num = 81;
-    for(let i=0; i*i<=num;i++){
-        if(i*i === num) {
-            console.log("Perfect Square Number");
-            console.log("Square Root", i);
-            return;
-        }
-    }
-    console.log("Not a perfect square number");
+-----
+**PerfectSquare**
+-----
+function PerfectSquare(num){
+     let sqrt = Math.sqrt(num);
+     console.log(sqrt);
+
+     return sqrt === Math.floor(sqrt);
 }
-squareRoot()
-
-// 0,1,2,3,4
+console.log(PerfectSquare(81));
 
 
+-----
+**PerfectCube**
+-----
+function PerfectCube(num){
+    let cuberoot = Math.cbrt(num);
+    console.log(cuberoot);
 
+    return cuberoot === Math.round(cuberoot);
+}
+console.log(PerfectCube(76));
+
+
+
+-----
+**Print PerfectSquare upto 20**
+-----
+function square(){
+    
+   for(let i=1;i*i<20;i++){
+       console.log(i*i);
+   }
+}
+square();
+
+
+
+
+-----
+**Print PerfectCube upto 20**
+-----
+function cube(){
+
+   for(let i;i**3 <20;i++){
+       console.log(i**3);
+   }
+}
+cube();
 
