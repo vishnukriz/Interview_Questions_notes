@@ -1,1 +1,23 @@
+**Reverse String**  //"vardhini Vishnu is name My"
 
+function reverse(){
+    let str = "My name is Vishnu vardhini";
+    console.log("Given string: " + str);
+    
+    let arr = str.split(" ");
+    //console.log(arr);
+    
+    for(let i=0;i<(arr.length-1)/2;i++){
+        let first = i;
+        let last = arr.length-1-i;
+        let temp;
+        
+        temp = arr[first]
+        arr[first] = arr[last]
+        arr[last] = temp
+    }
+    //console.log(arr);
+    let revstr = arr.join(" ");
+    console.log("reverseString: " + revstr);
+}
+reverse();
