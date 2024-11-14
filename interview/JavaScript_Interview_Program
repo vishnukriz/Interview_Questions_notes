@@ -62,3 +62,32 @@ reverse();
 -----------
 **Reverse String**  //"inihsraV unhsiV si eman yM"
 -----------
+function reverse(){
+    let str = "My name is Vishnu vardhini";
+    
+    let arr = str.split(" ");
+    //console.log(arr);
+    
+    let reverseArr = [];
+    
+    for(let word of arr){
+        let splitword = word.split("");
+        //console.log(splitword);    
+        
+        let reversesplitword = splitword.reverse();
+        //console.log(reversesplitword);
+        
+        let joinword = reversesplitword.join("");
+        //console.log(joinword);
+        
+        reverseArr.push(joinword);
+    }
+    //console.log(reverseArr);
+    let revArr = reverseArr.reverse();
+    //console.log(revArr);
+    
+    let revstr = revArr.join(" ");
+    console.log(revstr);
+   
+ }
+reverse();
