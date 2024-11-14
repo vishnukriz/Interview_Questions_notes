@@ -91,3 +91,68 @@ function reverse(){
    
  }
 reverse();
+
+****----------------------------------------------------------------------------****
+
+--------
+**duplicate number**  //print array without duplicates
+--------
+function duplicate(){ 
+    let arr = [6,8,9,8,0,4,9,2,1,0];
+    let obj = {};
+   
+    for(let i=0;i<arr.length;i++){
+        let ele = arr[i];
+        if(obj[ele]){
+            obj[ele] = obj[ele] + 1;
+        }else{
+            obj[ele] = 1;
+        }
+    }
+    //console.log(obj);
+    let dupArr = [];
+    
+    for(let key in obj){
+        //console.log(key, obj[key]);
+        
+     if(obj[key] == 1){
+         dupArr.push(parseInt(key));
+    }
+    }
+    console.log(dupArr);
+}
+duplicate();
+
+
+
+
+--------
+**duplicate number**  // print array only duplicates
+--------
+function duplicate(){
+    let arr = [6,8,9,8,0,4,9,2,1,0];
+    let obj = {};
+    
+    for(let i=0;i<arr.length;i++){
+        let ele = arr[i];
+     if(obj[ele]){
+         obj[ele] = obj[ele] + 1;
+     }else{
+         obj[ele] = 1;
+     }
+    }
+    //console.log(obj);
+    let dupArr = [];
+    
+    for(let key in obj){
+       // console.log(key, obj[key]);
+    
+    if(obj[key] == 2){
+        dupArr.push(parseInt(key));
+    }
+ }
+ console.log(dupArr);
+    
+    
+}
+duplicate();
