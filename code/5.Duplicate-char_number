@@ -1,0 +1,80 @@
+function duplicate(){
+    let str = "he is a handsome guy and nice guy too";
+    let arr = str.split(" ");
+    let obj = {};
+    
+    for(let i=0; i<arr.length-1; i++){
+        let ele = arr[i];
+        if(obj[ele]){
+            obj[ele] = obj[ele] + 1;
+        }else{
+            obj[ele] = 1;
+        }
+    }
+    console.log(obj);
+    for(let key in obj){
+        console.log(key, obj[key]);
+        if(obj[key]>1){
+            console.log("duplicate");
+            return;
+        }
+    
+    }
+    console.log("not a duplicate");
+    
+}
+duplicate();
+
+
+
+/**
+{ he: 1, is: 1, a: 1, handsome: 1, guy: 2, and: 1, nice: 1 }
+he 1
+is 1
+a 1
+handsome 1
+guy 2
+duplicate
+**/
+
+
+===================================================================
+function duplicatesInArray(){
+    let arr = [1,2,3,3,4,2,4,3,5,6,3];
+    console.log(arr);
+    let obj = {};
+    let dupArr = [];
+
+    for(let i=0;i<arr.length;i++){
+        console.log(arr[i]);
+        if(obj[arr[i]]){
+            obj[arr[i]] = obj[arr[i]] + 1;
+        } else {
+            obj[arr[i]] = 1;
+        }
+    }
+    
+    for(let key in obj){
+        console.log(key, obj[key]);
+        if(obj[key]>1) dupArr.push(key);
+    }
+    
+    console.log(dupArr);
+}
+
+duplicatesInArray();
+
+Complexity:
+//Time - n+n = 2n =n
+
+//for(){
+    for(){}
+}
+n*n
+
+//space = n + n + 0 = 2n
+
+**Results**
+------
+[ '2', '3', '4' ]
+
