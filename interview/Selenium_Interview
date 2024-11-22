@@ -1,6 +1,6 @@
 **program questions**
 --
-1) Declare a string {2,3,4,s,t,u} with alpha numeric and get result as {s:2, t:3, u:4}
+1) Declare a string "234stu" with alpha numeric and get result as {s:2, t:3, u:4}
 
 
 **Selenium Questions**:
